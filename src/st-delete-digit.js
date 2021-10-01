@@ -12,5 +12,13 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function deleteDigit(n) {
+    let str = String(n);
+    let min = str[0];
+    for (let i = 0; i < str.length; i++ ) {
+        if (str[i] < min){
+           min = str[i];
+        }
+    }
+    return Number(str.replace(`${min}`, "")) 
+  }
   
-}
